@@ -1,0 +1,16 @@
+
+.scores{
+float:left;
+font:red;
+}
+.timer{
+float:right;
+font:red;
+}
+.test{
+
+}
+#Begin{
+font-size: larger;
+font:red
+}
