@@ -1,16 +1,26 @@
+*{
+ text-align: center;
+}
 
 .scores{
+-ms-flex-align: left;
 float:left;
 font:red;
 }
+
 .timer{
+align-self: flex-end;
 float:right;
 font:red;
 }
+
 .test{
 
 }
-#Begin{
+
+Begin{
 font-size: larger;
-font:red
+font:red;
+width:300px;
+height: 300
 }
