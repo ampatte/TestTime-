@@ -5,19 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TestTime!</title>
-    <link rel=" stylesheet" href="style.css"/>
+    <link rel = "stylesheet" href = "style.css"/>
 </head>
 <body>
     <header>
-        <div class= "scores">
-        <h4>View Highscores</h4>
+        <div>
+            <label onclick = "totalScores()">View Highscores</label>
+            <span id = "TotalScores"></span>
         </div>
-        <div id="timer"></div>
+        
+        <div>
+            <label>Time: </label><label id="timer">0</label><div>
+        </div>
     </header>
-    <h1>Code Quiz!</h1>
-    <div class="test">
-        <button id="Begin"></button>
+
+    <h1><strong>JavaScript Code Quiz</strong></h1>
+    <p>Select the correct answer for each question before time runs out!</p>
+
+    <button value = "startbtn" class = "button" id ="startbtn">Begin Quiz </button>
+    
+    <div>
+        <p id = "question"></p>
+        <button class= "answerBtn" hidden value= "1st" id = "1st"></button>
+        <button class= "answerBtn" hidden value= "2nd" id = "2nd"></button>
+        <button class= "answerBtn" hidden value= "3rd" id = "3rd"></button>
     </div>
-    <script src="script.js"></script>
+    
+    <span id = "score">Score:</span>
+    <script src = "script.js"></script>
 </body>
 </html>
