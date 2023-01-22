@@ -2,8 +2,8 @@
  text-align: center;
 }
 
-#totalScores{
-align: left;
+#TotalScores{
+align-items: left;
 float:left;
 font:red;
 }
@@ -23,6 +23,62 @@ font:red;
 font-size: larger;
 width:200px;
 height: 70px;
-border-radius:20px;
 
+text-decoration: none;
+  
+  color: transparent;
+  padding: 40px 80px;
+  font-size: 28px;
+  font-family: sans-serif;
+  letter-spacing: 5px;
+  transition: all 0.5s;
+  position: relative;
+}
+#startbtn:before {
+  content: "Start Quiz";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: red;
+  font-size: 28px;
+  top: 0;
+  left: 100%;
+  font-family: sans-serif;
+  letter-spacing: 5px;
+  transition: all 1s;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: scale(0) rotatey(0);
+  opacity: 0;
+}
+#startbtn:hover:before {
+  transform: scale(1) rotatey(360deg);
+  left: 0;
+  opacity: 1;
+}
+#startbtn:after {
+  content: "Start Quiz";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  background: black;
+  font-size: 28px;
+  top: 0;
+  left: 0;
+  font-family: sans-serif;
+  letter-spacing: 5px;
+  transition: all 1s;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: scale(1) rotatey(0);
+  opacity: 1;
+}
+#startbtn:hover:after {
+  transform: scale(0) rotatey(360deg);
+  left: -100%;
+  opacity: 0;
 }
