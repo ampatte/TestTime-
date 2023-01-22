@@ -30,7 +30,9 @@
 
   ## Usage
   This was created for a homework challenge. It will be used as a mock interview assessment quiz. The problem solved is, preparing me for a career in software development by building my skills and readiness.
-  ![alt text](Assets/images/2023-01-05 (2).png)
+  ![alt text](Assets/landing.png)
+  ![alt text](./Assets/quiz.png)
+  
   
   ## Contribution
   I was the only contributor. Contact me by email if you are interested in contributing.

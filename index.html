@@ -8,17 +8,18 @@
     <title>TestTime!</title>
     <link rel = "stylesheet" href = "style.css"/>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-xl ">
+        <div class="container-fluid py-5">
             <a class="navbar-brand" href="#"></a>     
                 <label onclick= "viewHighscores()" id = "TotalScores">View Highscores</label>
                     <label id="timer">Time: 0</label>
                         </div>
                             </nav>
-                                <div class= "container">                                
+                                <div class= "container py-5 bg-light rounded-3">                                
                             <header class= "pb-5">
-                        <h1><strong>JavaScript Code Quiz</strong></h1>
+                        <h1 class= "display-4 fw-bold"><strong>JavaScript Code Quiz</strong></h1>
                     <h5 id="instructions" class="text-muted" >
                 <p>Answer all questions before the timer runs out!</p>
             <p><em>Each correct answer is worth 10 points</em></p>
@@ -30,17 +31,17 @@
                             <div class= " container-fluid py-3">  
                                 <button value = "startbtn" class =  "btn btn-secondary btn-xlg" id ="startbtn" href="#">Begin Quiz </button>
                                     <h3><p id = "question"></p></h3>
-                                    <div class="d-grid gap-2 col-6 mx-auto">
-                                <button class = "answerBtn btn btn-primary" hidden value = "1st" id = "1st"></button>
-                            <button class = "answerBtn btn btn-primary" hidden value = "2nd" id = "2nd"></button>
-                        <button class = "answerBtn btn btn-primary" hidden value= "3rd" id = "3rd"></button>
+                                        <div class="d-grid gap-2 col-6 mx-auto">
+                                    <button class = "answerBtn btn btn-primary" hidden value = "1st" id = "1st"></button>
+                                <button class = "answerBtn btn btn-primary" hidden value = "2nd" id = "2nd"></button>
+                            <button class = "answerBtn btn btn-primary" hidden value= "3rd" id = "3rd"></button>
+                        </div>
                     </div>
                 </div>
-             </div>
-        </main>
+            </main>
+        <span id = "score" hidden>Score: </span>
     </div>
                                                                          
-        <span id = "score" hidden>Score: </span>
     <script src = "script.js"></script>
 </body>
 </html>

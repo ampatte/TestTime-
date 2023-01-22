@@ -26,15 +26,13 @@ let answerChoices = [
 ];
 let answers = ["2nd", "1st", "3rd"];
 
-
-
 function Quiz(answerValue) {
+  //hide instructions, start button; display score
   document.getElementById("instructions").setAttribute("hidden", "hidden");
   document.getElementById("startbtn").setAttribute("hidden", "hidden");
   document.getElementById("score").innerHTML = "Score: ";
   TotalScores.innerHTML = "";
   
-
   if (i > 0 && i <= 3) {
     if (answerValue == answers[i - 1]) {
       score += 10;
@@ -45,14 +43,16 @@ function Quiz(answerValue) {
       alert("Wrong! -10 points");
     }
   }
+
   if (i == 0) {
-    //display answerGroups
+    //display answer buttons
     document.getElementById("1st").removeAttribute("hidden");
     document.getElementById("2nd").removeAttribute("hidden");
     document.getElementById("3rd").removeAttribute("hidden");
     document.getElementById("score").removeAttribute("hidden");
     score = 0;
 
+    //resetting by hiding answer buttons, questions; unhiding start button
     timerInterval= setInterval(function() {
     if (timeLeft < 1 || i == 4) {
       clearInterval(timerInterval);
@@ -66,7 +66,6 @@ function Quiz(answerValue) {
       document.getElementById("question").innerHTML = "";
       document.getElementById("startbtn").removeAttribute("hidden");
       document.getElementById("startbtn").innerHTML = "Play Again";
-
       i = 0;
 
       if (score > 0 && timeLeft > 0) {
@@ -80,7 +79,7 @@ function Quiz(answerValue) {
   }
 
   document.getElementById("score").innerHTML = score;
-
+  //linking answer buttons to answers
   if (i <= 2) {
     document.getElementById("1st").innerHTML = answerChoices[i][0];
     document.getElementById("2nd").innerHTML = answerChoices[i][1];
@@ -97,9 +96,9 @@ function Quiz(answerValue) {
   }
 }
 
-
+//timer
 function startTimer() {
-  //timer
+
   timerInterval = setInterval(function () {
     timeLeft--;
     timer.textContent = timeLeft + " seconds left!";
@@ -111,9 +110,9 @@ function startTimer() {
   },1000);
 }
 
+// high scores
 function viewHighscores() { 
-  // high scores
-
+  
   HighScores.innerHTML = "";
   TotalScores.sort(function (a, b) {
     return b[1] - a[1];
@@ -124,26 +123,5 @@ function viewHighscores() {
       " | ";
   }}
 }
+
 document.getElementById("TotalScores")
-
-
-  // document.querySelectorAll(".answerBtn").forEach((item) => {
-  // item.addEventListener("click", function (event) {
-  //   event.preventDefault();
-  //   document.getElementById("1st").innerHTML = answerChoices[i][0];
-  //   document.getElementById("2nd").innerHTML = answerChoices[i][1];
-  //   document.getElementById("1st").innerHTML = answerChoices[i][2];
-  //   document.getElementById("question").innerHTML = questionArray[i];
-  //   console.log(event.target.value);
-
-  //  const answerBtn = event.target.value;
-  // if (answerBtn === answers[0]) {
-  //  score += 10;
-  //  alert("right answer");
-  // } else {
-  // timeLeft -= 10;
-  //  score -= 10;
-  // }
-  //   i++;
-  //   });
-  // });
