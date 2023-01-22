@@ -119,7 +119,7 @@ function viewHighscores() {
   });
   if(TotalScores.length > 0) {
   for (var i = 0; i< TotalScores.length; i++)  {
-    HighScores.innerHTML += "High Scores: " + TotalScores[i][0] + " " + TotalScores[i][1] +
+    HighScores.innerHTML += " " + TotalScores[i][0] + " " + TotalScores[i][1] +
       " | ";
   }}
 }
